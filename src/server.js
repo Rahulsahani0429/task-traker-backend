@@ -48,6 +48,7 @@ app.use('/api/', limiter);
 
 // Allow requests from frontend
 const allowedOrigins = [
+  'https://task-traker-frontend-ruddy.vercel.app',
   process.env.CLIENT_URL,
   process.env.FRONTEND_URL, // alias
   'http://localhost:3000',

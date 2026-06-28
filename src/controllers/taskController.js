@@ -15,6 +15,7 @@ const getAllTasks = asyncHandler(async (req, res) => {
   const { status, priority, search, sort, page = 1, limit = 50 } = req.query;
 
   // Build filter object
+  console.log(req.query, "--------------------------------")
   const filter = {};
 
   if (status && status !== 'All') {
@@ -140,6 +141,8 @@ const createTask = asyncHandler(async (req, res) => {
   }
 
   const { title, description, status, priority, dueDate } = req.body;
+  console.log(req.body)
+
 
   const task = await Task.create({
     title,
